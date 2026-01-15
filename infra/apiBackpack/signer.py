@@ -7,7 +7,8 @@ class Signer:
     """
     responsável por assinar requisições
     """
-    
+    def __init__(self, authenticator):
+        self.authenticator = authenticator
 
     def sign(self, instruction: str, params: Optional[Dict] = None) -> Tuple[Dict, int]:
         
